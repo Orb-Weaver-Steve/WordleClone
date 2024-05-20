@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.nav-bar {
+    border-bottom: 2px solid #333;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.brand {
+    font-size: 30px;
+}
+.scoreboard {
+    max-width: 295px;
+    width: 100%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 7;
+    row-gap: 10px;
+    column-gap: 5px;
+}
+.letter {
+    height: 45px;
+    width: 45px;
+    font-size: 30px;
+    text-transform: uppercase;
+    border: 3px solid #ccc;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.replay {
+    visibility: hidden;
+    height: 45px;
+    width: 225px;
+    font-size: 30px;
+    margin: 30px 0 0 40%;
+    border: 3px solid #CCC;
+    text-align: center;
+    background-color: rgb(52, 147, 52);
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.correct {
+    background-color: darkgreen;
+    color: white;
+}
+.close {
+    background-color: goldenrod;
+    color:white;
+}
+.wrong {
+    background-color: #888;
+    color: white;
+}
+.invalid {
+    animation: flash 1s;
+}
+
+@keyframes flash {
+    5% {
+        border-color: crimson;
+    }
+    100% {
+        border-color: #ccc;
+    }
+}
+
+.spiral {
+    font-size: 40px;
+    animation: spin 1.5s lienar infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.info-bar {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.show {
+    visibility: visible;
+}
+@keyframes rainbow {
+    100%,
+    0% {
+        color: red;
+    }
+    16% {
+        color: orange;
+    }
+    32% {
+        color: yellow;
+    }
+    48% {
+        color: green;
+    }
+    66% {
+        color: blue;
+    }
+    84% {
+        color: indigo;
+    }
+    100% {
+        color: violet;
+    }
+}
+.winner {
+    animation: rainbow 4s infinite linear;
+}
